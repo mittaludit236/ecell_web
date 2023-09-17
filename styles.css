@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    line-height: 2;
+    font-weight: 400;
+  }  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 150rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+  }
+  .header{
+    display: flex;
+    box-shadow: 0 1.4rem 3.1rem rgba(0,0,0,0.1);
+    padding: 0 5rem;
+    height: 4.5rem;
+    background-color: white;
+    justify-content: flex-end;
+    align-items: center;
+  }
+.nav-items{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 5rem;
+}
+.nav-link:link,:visited{
+    text-decoration: none;
+    display: inline-block;
+    color: #333;
+    font-weight: 450;
+    font-size: 2rem;
+}
+.nav-link:hover,:active{
+    color: orange;
+}
+.icond[name="close-outline"] {
+    display: none;
+}
+.btn{
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+}
+.icond{
+    height: 5rem;
+    width: 5rem;
+    color: #333;
+}
+.main{
+    padding: 4rem;
+    margin-top: 5rem;
+}
+.grid-item{
+    background-color: white;
+    margin: 1.2rem 1.2rem;
+    border-radius: 1.2rem;
+    height: 38rem;
+    padding: 2rem 3rem;
+    box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+#b1{
+    background-image: linear-gradient(to bottom right, #3300ff, #fa00ff);
+}
+img{
+    height: 90%;
+    width: 290%;
+}
+#b2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box,.hello{
+    background-color: #00407A;
+    margin: 0.4rem;
+    border-radius: 2rem;
+}
+.hello{
+    background-color: #7a0000;
+}
+@media (max-width: 752px)
+{
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 0 3rem;
+    }
+    .container{
+        column-gap: 0.6rem;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 0.8rem;
+    }
+    #b1{
+        grid-column: 1/-1;
+
+    }
+    #b2{
+        overflow: hidden;
+    }
+    .box{
+        margin: 0.1rem;
+    }
+    .nav-items{
+        gap: 3.4rem;
+    }
+}
+@media (max-width: 544px)
+{
+    .container{
+        grid-template-columns: 1fr;
+    }
+    .grid-item{
+        height: 30rem;
+    }
+    .btn{
+        display: block;
+        cursor: pointer;
+        background-color: grey;
+    }
+    .mn{
+        display: none;
+    }
+    .nv .mn{
+        display: block;
+        visibility: visible;
+    }
+    .nv .icond[name="close-outline"]{
+        display: block;
+    }
+    .nv .icond[name="menu-outline"]{
+        display: none;
+    }
+}
